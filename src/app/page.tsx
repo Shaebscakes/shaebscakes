@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Menu, Cake, CakeSlice, Cookie, Croissant} from 'lucide-react';
+import { Menu, Cake, CakeSlice, Cookie, Croissant } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -18,9 +18,18 @@ import {
 } from "@/components/ui/sheet";
 import Autoplay from "embla-carousel-autoplay";
 
+// Define the interface for pastWork images
+interface PastWorkItem {
+  id: number;
+  name: string;
+  url: string;
+}
+
 const HomePage = () => {
   const [showHeader, setShowHeader] = useState(false);
-  const [pastWork, setPastWork] = useState([]);
+  
+  // Use the PastWorkItem[] type for pastWork state
+  const [pastWork, setPastWork] = useState<PastWorkItem[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +50,7 @@ const HomePage = () => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
+      const data: PastWorkItem[] = await response.json(); // Add proper type annotation
       setPastWork(data);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -62,8 +71,8 @@ const HomePage = () => {
         <div className="bg-[#710E3E] shadow-md">
           <div className="container mx-auto flex justify-between items-center p-4">
             <div className="flex items-center">
-              <img style={{height: '40px', marginRight: '10px'}} src="/Logo.png" alt="Logo" />
-              <h1 className="text-xl md:text-2xl font-bold text-white">Shae-B's Cakes & Confections</h1>
+              <img style={{ height: '40px', marginRight: '10px' }} src="/Logo.png" alt="Logo" />
+              <h1 className="text-xl md:text-2xl font-bold text-white">Shae-B&apos;s Cakes & Confections</h1>
             </div>
             <nav className="hidden md:flex">
               <a href="/"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Home</Button></a>
@@ -96,11 +105,10 @@ const HomePage = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         }}>
-          <div className="aB'solute inset-0 bg-black opacity-50"></div>
-          <div className="m-2 backgroundShading relative z-10 text-center text-white">
-            <h2 className="text-5xl font-bold mb-4">Shae-B's Cakes & Confections</h2>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative z-10 text-center text-white">
+            <h2 className="text-5xl font-bold mb-4">Shae-B&apos;s Cakes & Confections</h2>
             <p className="text-xl">Sweets for your sweet tooth.</p>
-            { /* <Button className="bg-[#710E3E] hover:bg-[#8F1150] text-white text-lg px-8 py-3">See Our Past Creations</Button>  */ }
           </div>
         </section>
 
@@ -232,7 +240,7 @@ const HomePage = () => {
           <div className="container mx-auto text-center">
             <h3 className="text-3xl font-bold text-[#710E3E] mb-8">Contact Us</h3>
             <p className="max-w-2xl mx-auto text-lg mb-12">
-              All of our creations are customized to your specific needs, contact us to discuss more and get a specific price.
+              All of our creations are customized to your specific needs, contact us to discuss details and get a specific price.
             </p>
           </div>
         </section>
