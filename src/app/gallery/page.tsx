@@ -10,10 +10,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+// Define the type for the image object
+interface Image {
+  id: number;
+  name: string;
+  url: string;
+}
+
 const ImageGallery = () => {
-  const [images, setImages] = useState([]);
+  // Set the state to be an array of Image objects
+  const [images, setImages] = useState<Image[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchImages();
@@ -26,7 +34,7 @@ const ImageGallery = () => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
+      const data: Image[] = await response.json(); // Ensure data is typed as an array of Image objects
       setImages(data);
     } catch (error) {
       console.error('Error fetching images:', error);
