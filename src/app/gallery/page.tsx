@@ -48,7 +48,7 @@ const ImageGallery = () => {
     <div className="min-h-screen flex flex-col">
       <header className="fixed w-full z-20 bg-[#710E3E] shadow-md">
         <div className="container mx-auto flex justify-between items-center p-4">
-          <h1 className="text-xl md:text-2xl font-bold text-white">Shae-Bs Cakes & Confections</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-white">Shae-B&apos;s Cakes & Confections</h1>
           <nav className="hidden md:flex">
             <a href="/"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Home</Button></a>
             <a href="/gallery"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Gallery</Button></a>

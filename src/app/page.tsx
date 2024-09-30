@@ -248,7 +248,7 @@ const HomePage = () => {
 
       <footer className="bg-[#710E3E] text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <p>&copy; 2024 Shae-B's Cakes & Confections. All rights reserved.</p>
+          <p>&copy; 2024 Shae-B&apos;s Cakes & Confections. All rights reserved.</p>
           <div className="flex space-x-4">
 
           </div>

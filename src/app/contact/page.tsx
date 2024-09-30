@@ -61,7 +61,7 @@ const ContactForm = () => {
         <header className={`fixed w-full z-20 transition-all duration-300 ${showHeader ? 'top-0' : '-top-20'}`}>
         <div className="bg-[#710E3E] shadow-md">
           <div className="container mx-auto flex justify-between items-center p-4">
-            <h1 className="text-2xl font-bold text-white">Shae-B's Cakes & Confections</h1>
+            <h1 className="text-2xl font-bold text-white">Shae-B&apos;s Cakes & Confections</h1>
             <nav>
               <a href="/"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Home</Button></a>
               <a href="/about"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">About</Button></a>
