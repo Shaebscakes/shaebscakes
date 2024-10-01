@@ -9,6 +9,15 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 
 // Define the type for the image object
 interface Image {
@@ -89,12 +98,26 @@ const ImageGallery = () => {
               {images.map((image) => (
                 <Card key={image.id} className="mb-4 break-inside-avoid">
                   <CardContent className="p-2 h-full flex flex-col">
-                    <img
-                      src={image.url}
-                      alt={image.name}
-                      className="w-full h-auto object-cover"
-                      style={{borderRadius: "10px"}}
-                    />
+                    <Dialog>
+                      <DialogTrigger>                          
+                        <img
+                            src={image.url}
+                            alt={image.name}
+                            className="w-full h-auto object-cover"
+                            style={{borderRadius: "10px"}}
+                          />
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <img
+                            src={image.url}
+                            alt={image.name}
+                            className="w-full h-auto object-cover"
+                            style={{borderRadius: "10px"}}
+                          />
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
                     <div className="mt-2">
                       <h3 className="text-lg font-semibold text-[#710E3E]">{image.name}</h3>
                     </div>
