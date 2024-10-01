@@ -112,7 +112,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="specialties" className="bg-white py-16 flex justify-center items-center min-h-screen">
+        <section id="specialties" className="bg-white py-16 flex justify-center items-center">
           <div className="container mx-auto">
             <h3 className="text-3xl font-bold text-[#710E3E] text-center mb-12">Our Specialties</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center">
@@ -242,6 +242,11 @@ const HomePage = () => {
             <p className="max-w-2xl mx-auto text-lg mb-12">
               All of our creations are customized to your specific needs, contact us to discuss details and get a specific price.
             </p>
+            <a href="/contact">
+              <Button className="bg-[#710E3E] hover:bg-[#8F1150] text-white text-lg px-8 py-3">
+                Contact Us
+              </Button>
+              </a>
           </div>
         </section>
       </main>
