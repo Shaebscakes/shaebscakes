@@ -46,7 +46,7 @@ const HomePage = () => {
 
   const fetchPastWorkImages = async () => {
     try {
-      const response = await fetch("/api/images");
+      const response = await fetch("https://api.shaebscakes.com/image-library-urls");
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
