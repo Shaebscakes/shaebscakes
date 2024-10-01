@@ -107,13 +107,13 @@ const ImageGallery = () => {
                             style={{borderRadius: "10px"}}
                           />
                       </DialogTrigger>
-                      <DialogContent>
+                      <DialogContent style={{ padding: '5px' }}>
                         <DialogHeader>
                           <img
                             src={image.url}
                             alt={image.name}
                             className="w-full h-auto object-cover"
-                            style={{borderRadius: "10px"}}
+                            style={{borderRadius: "5px"}}
                           />
                         </DialogHeader>
                       </DialogContent>
