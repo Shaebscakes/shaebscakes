@@ -63,28 +63,34 @@ const ImageGallery = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+
       <header className="fixed w-full z-20 bg-[#710E3E] shadow-md">
-        <div className="container mx-auto flex justify-between items-center p-4">
-          <h1 className="text-xl md:text-2xl font-bold text-white">Shae-B&apos;s Cakes & Confections</h1>
-          <nav className="hidden md:flex">
-            <a href="/"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Home</Button></a>
-            <a href="/gallery"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Gallery</Button></a>
-            <a href="/contact"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80">Contact</Button></a>
-          </nav>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden text-white">
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[200px] sm:w-[300px] bg-[#710E3E]">
-              <nav className="flex flex-col space-y-4 mt-8">
-                <a href="/"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Home</Button></a>
-                <a href="/gallery"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Gallery</Button></a>
-                <a href="/contact"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Contact</Button></a>
-              </nav>
-            </SheetContent>
-          </Sheet>
+        <div className="bg-[#710E3E] shadow-md">
+          <div className="container mx-auto flex justify-between items-center p-4">
+            <div className="flex items-center">
+              <img style={{ height: '40px', marginRight: '10px' }} src="/Logo.png" alt="Logo" />
+              <h1 className="text-xl md:text-2xl font-bold text-white">Shae-B&apos;s Cakes & Confections</h1>
+            </div>
+            <nav className="hidden md:flex">
+              <a href="/"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Home</Button></a>
+              <a href="/gallery"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Gallery</Button></a>
+              <a href="/contact"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80">Contact</Button></a>
+            </nav>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" className="md:hidden text-white">
+                  <Menu />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[200px] sm:w-[300px] bg-[#710E3E]">
+                <nav className="flex flex-col space-y-4 mt-8">
+                  <a href="/"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Home</Button></a>
+                  <a href="/gallery"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Gallery</Button></a>
+                  <a href="/contact"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Contact</Button></a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </header>
 
@@ -94,9 +100,9 @@ const ImageGallery = () => {
           {isLoading && <div className="text-center py-8">Loading images...</div>}
           {error && <div className="text-center py-8 text-red-500">{error}</div>}
           {!isLoading && !error && (
-            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
+            <div style={{marginLeft: '5px', marginRight: '5px'}} className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
               {images.map((image) => (
-                <Card key={image.id} className="mb-4 break-inside-avoid">
+                <Card style={{}} key={image.id} className="mb-4 break-inside-avoid">
                   <CardContent className="p-2 h-full flex flex-col">
                     <Dialog>
                       <DialogTrigger>                          

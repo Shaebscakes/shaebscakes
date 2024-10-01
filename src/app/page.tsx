@@ -115,7 +115,7 @@ const HomePage = () => {
         <section id="specialties" className="bg-white py-16 flex justify-center items-center">
           <div className="container mx-auto">
             <h3 className="text-3xl font-bold text-[#710E3E] text-center mb-12">Our Specialties</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center">
+            <div style={{marginLeft: '5px', marginRight: '5px'}} className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
               <Card className="border-[#710E3E] border-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center text-[#710E3E]">
@@ -131,7 +131,7 @@ const HomePage = () => {
               <Card className="border-[#710E3E] border-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center text-[#710E3E]">
-                    <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22c-1.32 0-1.85-2.36-1.96-3.3a5.56 5.56 0 0 1 .32-2.7a2.5 2.5 0 0 1 1.87-1.62c1.17-.2 2 .5 3.06.74a1.21 1.21 0 0 0 1.56-1.37C9.41 12.03 6.28 12 5 12c0-1.86 2.04-2.1 3.5-1.96a10.8 10.8 0 0 1 2.54.56c.5.17 1.08.6 1.63.56c.83-.07 1-.93.64-1.56C12.44 8.12 9.97 8 8.5 8c0-2 1.73-2.38 3.39-2.08a11.6 11.6 0 0 1 2.49.79c.51.22 1.12.64 1.68.45c1.44-.44-.06-1.98-.7-2.35a6.6 6.6 0 0 0-1.42-.58c-.54-.16-1.2-.1-.71-.73a5.13 5.13 0 0 1 2.73-1.24c1.89-.44 4.5-.52 4.96 1.86a5.3 5.3 0 0 1-.85 3.58a39 39 0 0 1-6.85 8.63a36.6 36.6 0 0 1-4.6 3.99C7.62 21.04 6.3 22 5 22"/></svg>
+                  <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.194 14.077c-1.248 1.231-1.35 3.54-1.057 5.674c.265 1.935 2.442 2.848 4.075 1.825c2.987-1.87 6.106-4.334 9.095-7.281c3.07-3.028 4.753-5.334 6.237-7.927c.9-1.573.478-3.67-1.344-4.136c-1.995-.509-4.58-.3-6.862 1.846m-10.144 10c-.834-3.74 2.096-8.146 8.972-4.284m-8.972 4.283c.623.013 2.024.295 3.36 1.248m.292-7.13c.063-1.94 1.977-5.19 6.492-4.117m0 0c.966.23 2.052.657 3.264 1.338" color="currentColor"/></svg>
                     Breads
                   </CardTitle>
                 </CardHeader>
@@ -170,7 +170,7 @@ const HomePage = () => {
         <section id="about" className="bg-gray-100 py-16">
           <div className="container mx-auto text-center">
             <h3 className="text-3xl font-bold text-[#710E3E] mb-8">About Us</h3>
-            <p className="max-w-2xl mx-auto text-lg mb-12">
+            <p style={{marginLeft: '5px', marginRight: '5px'}} className="max-w-2xl mx-auto text-lg mb-12">
               We are a local home based bakery providing customized confections for any occasion. With over 30 years of experience, we can create any confection for any event.
             </p>
           </div>
@@ -239,7 +239,7 @@ const HomePage = () => {
         <section id="contact" className="bg-gray-100 py-16">
           <div className="container mx-auto text-center">
             <h3 className="text-3xl font-bold text-[#710E3E] mb-8">Contact Us</h3>
-            <p className="max-w-2xl mx-auto text-lg mb-12">
+            <p style={{marginLeft: '5px', marginRight: '5px'}} className="max-w-2xl mx-auto text-lg mb-12">
               All of our creations are customized to your specific needs, contact us to discuss details and get a specific price.
             </p>
             <a href="/contact">

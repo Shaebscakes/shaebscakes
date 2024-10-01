@@ -53,41 +53,33 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen">
-      <header className="fixed top-0 w-full z-20 bg-[#710E3E] shadow-md">
-        <div className="container mx-auto flex justify-between items-center p-4">
-          <h1 className="text-xl md:text-2xl font-bold text-white">
-            Shae-B&apos;s Cakes & Confections
-          </h1>
-          <nav className="hidden md:flex space-x-2">
-            {['Home', 'Gallery', 'Contact'].map((item) => (
-              <a key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
-                <Button 
-                  variant="ghost" 
-                  className="text-white hover:text-[#710E3E] hover:bg-white/80"
-                >
-                  {item}
+      <header className="fixed w-full z-20 bg-[#710E3E] shadow-md">
+        <div className="bg-[#710E3E] shadow-md">
+          <div className="container mx-auto flex justify-between items-center p-4">
+            <div className="flex items-center">
+              <img style={{ height: '40px', marginRight: '10px' }} src="/Logo.png" alt="Logo" />
+              <h1 className="text-xl md:text-2xl font-bold text-white">Shae-B&apos;s Cakes & Confections</h1>
+            </div>
+            <nav className="hidden md:flex">
+              <a href="/"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Home</Button></a>
+              <a href="/gallery"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80 mr-2">Gallery</Button></a>
+              <a href="/contact"><Button variant="ghost" className="text-white hover:text-[#710E3E] hover:bg-white/80">Contact</Button></a>
+            </nav>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" className="md:hidden text-white">
+                  <Menu />
                 </Button>
-              </a>
-            ))}
-          </nav>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden text-white">
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[200px] sm:w-[300px] bg-[#710E3E]">
-              <nav className="flex flex-col space-y-4 mt-8">
-                {['Home', 'Gallery', 'Contact'].map((item) => (
-                  <a key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}>
-                    <Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">
-                      {item}
-                    </Button>
-                  </a>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[200px] sm:w-[300px] bg-[#710E3E]">
+                <nav className="flex flex-col space-y-4 mt-8">
+                  <a href="/"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Home</Button></a>
+                  <a href="/gallery"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Gallery</Button></a>
+                  <a href="/contact"><Button variant="ghost" className="w-full text-white hover:text-[#710E3E] hover:bg-white/80">Contact</Button></a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </header>
       
