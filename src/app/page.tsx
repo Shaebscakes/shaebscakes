@@ -170,8 +170,9 @@ const HomePage = () => {
         <section id="about" className="bg-gray-100 py-16">
           <div className="container mx-auto text-center">
             <h3 className="text-3xl font-bold text-[#710E3E] mb-8">About Us</h3>
-            <p style={{marginLeft: '5px', marginRight: '5px'}} className="max-w-2xl mx-auto text-lg mb-12">
-              We are a local home based bakery providing customized confections for any occasion. With over 30 years of experience, we can create any confection for any event.
+            <p className="max-w-2xl mx-auto text-lg mb-2">
+              We are a local home based bakery providing customized confections for any occasion. 
+              With over 30 years of experience, we can create any confection for any event.
             </p>
           </div>
         </section>
@@ -239,14 +240,14 @@ const HomePage = () => {
         <section id="contact" className="bg-gray-100 py-16">
           <div className="container mx-auto text-center">
             <h3 className="text-3xl font-bold text-[#710E3E] mb-8">Contact Us</h3>
-            <p style={{marginLeft: '5px', marginRight: '5px'}} className="max-w-2xl mx-auto text-lg mb-12">
+            <p className="max-w-2xl mx-auto text-lg mb-12">
               All of our creations are customized to your specific needs, contact us to discuss details and get a specific price.
             </p>
             <a href="/contact">
               <Button className="bg-[#710E3E] hover:bg-[#8F1150] text-white text-lg px-8 py-3">
                 Contact Us
               </Button>
-              </a>
+            </a>
           </div>
         </section>
       </main>
