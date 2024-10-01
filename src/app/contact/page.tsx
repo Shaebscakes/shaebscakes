@@ -36,7 +36,7 @@ const ContactForm = () => {
     setStatus('Sending...');
 
     try {
-        const response = await fetch('https://api.shaebscakes.com/send-email', {
+        const response = await fetch('https://shaebscakes.com/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
